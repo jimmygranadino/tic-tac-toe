@@ -3,11 +3,32 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Hello Front-End</title>
+  <title>Tic-tac-toe 2k20</title>
   <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
-  <h1>Hello Front-End</h1>
+  <h1>hey bud, lets play some tic-tac-toe</h1>
+  <div class="scoreBoard">
+    <div id="playerXTally">Exes (X)</div>
+    <div id="playerOTally">Ohs (O)</div>
+    <div id="player1Score"></div>
+    <div id="player2Score"></div>
+  </div>
+  <div class="playArea">
+    <div class="spaces" id="a1"></div>
+    <div class="spaces" id="a2"></div>
+    <div class="spaces" id="a3"></div>
+    <div class="spaces" id="b1"></div>
+    <div class="spaces" id="b2"></div>
+    <div class="spaces" id="b3"></div>
+    <div class="spaces" id="c1"></div>
+    <div class="spaces" id="c2"></div>
+    <div class="spaces" id="c3"></div>    
+  </div>
+  <div id="choosePlayers">
+    <button id="playerX">1 player game</button>
+    <button id="playerO">2 player game</button>
+  </div>
 
   <script type="text/javascript" src="js/app.js"></script>
 </body>

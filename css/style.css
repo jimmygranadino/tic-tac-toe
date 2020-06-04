@@ -1,3 +1,85 @@
+body {
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+  font-family: 'Helvetica', sans-serif;
+  background-color: whitesmoke;
+}
+
 h1 {
-  color: purple;
+  color: black;
+  margin-bottom: 20px;
+  font-family: 'Helvetica', sans-serif;
+
+}
+
+p {
+  margin-top: 20px;
+  height: 40px;
+}
+
+.playArea {
+  margin: 0 auto;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  display: flex;
+  width: 400px;
+}
+
+.spaces {
+  font-family: 'Helvetica', sans-serif;
+  text-align: center;
+  font-size: 100px;
+  flex: 0 0 33%;
+  height: 150px;
+  box-sizing: border-box;
+  line-height: 85px;
+  border: 1px solid black;
+}
+
+button {
+  background-color: whitesmoke;
+  border: 2px solid goldenrod;
+  width: 135px;
+}
+
+#playerXTally {
+  position: absolute;
+  top: 150px;
+  right: 30px;
+  height: 250px;
+}
+
+#playerOTally {
+  position: absolute;
+  top: 250px;
+  right: 30px;
+  height: 250px;
+}
+
+#playerX {
+  display: block;
+  margin-bottom: 75px;
+}
+
+#playerO {
+  display: block;
+  margin-bottom: 15px;
+}
+
+.scoreBoard {
+  position: absolute;
+  width: 75px;
+  height: 250px;
+  left: 100px;
+}
+
+/*visualizing divs for alignment*/
+div {
+  border: 2px solid red;
+}
+
+.spaces:hover {
+  background-color: black;
+  opacity: 40%;
 }
