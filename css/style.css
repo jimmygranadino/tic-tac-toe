@@ -45,26 +45,25 @@ button {
 
 #playerXTally {
   position: absolute;
-  top: 150px;
+  top: 0px;
   right: 30px;
-  height: 250px;
+  height: 85px;
 }
 
 #playerOTally {
   position: absolute;
-  top: 250px;
+  top: 85px;
   right: 30px;
-  height: 250px;
+  height: 85px;
 }
 
 #playerX {
   display: block;
   margin-bottom: 75px;
-}
+  height: 50px;
+  width: 150px;
+  background: goldenrod;
 
-#playerO {
-  display: block;
-  margin-bottom: 15px;
 }
 
 .scoreBoard {
