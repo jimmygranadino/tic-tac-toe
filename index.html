@@ -1,33 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Tic-tac-toe 2k20</title>
-  <link rel="stylesheet" type="text/css" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Tic Tac Toe 2k20</title>
 </head>
 <body>
-  <h1>hey bud, lets play some tic-tac-toe</h1>
-  <div class="scoreBoard">
-    <div id="playerXTally">Exes (X)</div>
-    <div id="playerOTally">Ohs (O)</div>
-    <div id="turnIndicator"></div>
-  </div>
-  <div class="playArea">
-    <div class="spaces" id="a1"></div>
-    <div class="spaces" id="a2"></div>
-    <div class="spaces" id="a3"></div>
-    <div class="spaces" id="b1"></div>
-    <div class="spaces" id="b2"></div>
-    <div class="spaces" id="b3"></div>
-    <div class="spaces" id="c1"></div>
-    <div class="spaces" id="c2"></div>
-    <div class="spaces" id="c3"></div>    
-  </div>
-  <div id="resetGame">
-    <button id="playerX">Start / New Game</button>
-  </div>
-
-  <script type="text/javascript" src="js/app.js"></script>
+    <div id="container">
+        <h3 id="turnDisplay">Player 1, place your X in a space.</h3>
+        <div class="q" id="q0"></div>
+        <div class="q" id="q1"></div>
+        <div class="q" id="q2"></div>
+        <div class="q" id="q3"></div>
+        <div class="q" id="q4"></div>
+        <div class="q" id="q5"></div>
+        <div class="q" id="q6"></div>
+        <div class="q" id="q7"></div>
+        <div class="q" id="q8"></div>
+    </div>
+    <div id="buttonHolder">
+      <button id="newGame" onclick="window.location.reload();">New Game</button>
+    </div>
+    <script src="js/app.js"></script>
 </body>
 </html>
