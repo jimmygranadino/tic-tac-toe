@@ -2,6 +2,11 @@
   background-color: #999999;
 }
 
+h3 {
+  font-family: Helvetica, sans serif;
+  text-align: center;
+}
+
 #container {
   width: 320px;
   height: 320px;
@@ -43,14 +48,14 @@
 }
 
 .winner {
-  color: red;
+  color: #00ff00;
 }
 
 #buttonHolder {
   margin: auto;
   position: relative;
   width: 70%;
-  top: 50px;
+  top: 75px;
 }
 
 button {

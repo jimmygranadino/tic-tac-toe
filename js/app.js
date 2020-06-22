@@ -13,27 +13,29 @@ const winningCombos = [
 
 // helper function that grabs the array
 const grid = () => Array.from(document.getElementsByClassName("q"))
-console.log("1) "+ grid)
 
 // converts the cell from a string to a number
 const qNumId = (qE1) => Number.parseInt(qE1.id.replace("q",""))
-console.log("2) " + qNumId)
 
 // return which cells are empty
 const emptyQs = () => grid().filter(_qE1 => _qE1.innerText === "")
-console.log("3) " + emptyQs)
 
 // are all items in the array the same that aren't blanks
 const allSame = (arr) => arr.every(_qEl => _qEl.innerText === arr[0].innerText && _qEl.innerText !== '')
-console.log("4) " + allSame)
 
 const takeTurn = (index, letter) => grid()[index].innerText = letter
+
+// randomly places an O on the game board where ever there is an empty space
 const opponentChoice = () => qNumId(emptyQs()[Math.floor(Math.random() * emptyQs().length)])
 
-// end game states
+// end game states - player win text display, winning combo color gets highlighted and listeners are disabled
 const endGame = (winningSequence) => {
   winningSequence.forEach(_qE1 => _qE1.classList.add("winner"))
+  document.getElementById("turnDisplay").innerHTML = "PLAYER 1 WINS! START A NEW GAME."
+  disableListeners()
 }
+
+// victory is set to false initially and a forEach loop checks if the grid has met any of the win states in my winningcombos array, if an allSame() sequence is found then then set victory to true and call endgame
 const checkForVictory = () => {
   let victory = false
 
@@ -50,7 +52,7 @@ const checkForVictory = () => {
 }
 
 
-// opponent takes turn
+// opponent takes turn, display indicator in browser and disable game board clicking until opponent turn is over
 const opponentTurn = () => {
   disableListeners()
   document.getElementById("turnDisplay").innerHTML = "PLAYER 2 IS MAKING THEIR MOVE. PLEASE WAIT..."
@@ -68,6 +70,7 @@ const clickFn = ($event) => {
   if(!checkForVictory())
       opponentTurn()
 }
+
 
 // turn on click for player turn
 const enableListeners = function() {
